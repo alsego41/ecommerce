@@ -23,6 +23,7 @@ p {
 	--yellow: rgb(246, 206, 76);
 	--pink: rgb(241, 152, 255);
 	--purple: rgb(141, 65, 255);
+	--lightPurple: rgb(190, 192, 255);
 }
 
 .header {
@@ -179,4 +180,101 @@ p {
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
+}
+
+/* Add product */
+.productFicha__container {
+	width: 80%;
+	background-color: var(--lightPurple);
+	margin: 20px auto;
+	padding: 30px 50px;
+	border-radius: 30px;
+}
+
+.productFicha__container input {
+	font-family: 'Gemunu Libre', sans-serif;
+}
+
+.productFicha__container label {
+	display: block;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+.product__input,
+.product__select,
+.product__textarea {
+	/* border-radius: 5px; */
+	font-size: 18px;
+	padding: 10px 20px;
+	width: 100%;
+	font-family: 'Gemunu Libre', sans-serif;
+	outline-color: transparent;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	/* font-weight: 600 */
+}
+
+.product__select,
+.product__textarea,
+.product__btn {
+	font-size: 18px;
+	padding: 10px 20px;
+	font-weight: 600;
+
+	font-family: 'Gemunu Libre', sans-serif;
+}
+
+.product__container--row {
+	margin-bottom: 20px;
+}
+
+.product__location {
+	display: grid;
+	/* grid-template-rows: 1em 1fr; */
+	grid-template-columns: 1fr 2fr;
+	/* flex-direction: row; */
+	/* gap: 15px; */
+	column-gap: 25px;
+}
+
+.product__location .product__input {
+	grid-row: 2/3;
+}
+
+.product__details {
+	display: grid;
+	/* grid-template-rows: 1fr 1fr; */
+	grid-template-columns: 1fr 1fr;
+	column-gap: 25px;
+}
+
+.product__details .product__textarea {
+	grid-row: 2/3;
+}
+
+.product__details--subgrid {
+	grid-row: 1/3;
+}
+
+#prodBrand {
+	margin-bottom: 15px;
+}
+
+.product__btn {
+	border: 0;
+	border-radius: 10px;
+	padding: 10px 30px;
+	background-color: white;
+}
+
+.product__btn:hover {
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+	cursor: pointer;
+}
+
+.product__container--lastrow {
+	margin: 0;
+	display: flex;
+	justify-content: flex-end;
 }
