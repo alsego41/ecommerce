@@ -33,7 +33,7 @@
                 </div>
                 <div class='product__container--row product__images'>
                     <label for='imgUpload'>Fotos</label>
-                    <input type='file' name='imgUpload' id='imgUpload'>
+                    <input type='file' name='imgUpload' id='imgUpload' class='product__img' value='+'>
                 </div>
                 <div class='product__container--row'>
                     <input type='radio' name='prodState' value='true' checked>ACTIVADA

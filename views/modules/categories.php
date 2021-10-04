@@ -2,7 +2,7 @@
     function renderCategories($categories) {
         while ($result = mysqli_fetch_assoc($categories)){
             echo "<li class='categories__box'>
-            <a href='#' class='categories__text'>$result[categoryName]</a>
+            <a href='?categoryId=$result[categoryId]' class='categories__text'>$result[categoryName]</a>
             </li>";
         }
     }

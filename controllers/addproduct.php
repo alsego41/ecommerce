@@ -1,6 +1,6 @@
 <?php 
     require_once "../views/modules/pageHead.php";
-    head('Inicio - Administrador');
+    head('Agregar nuevo producto - Administrador');
 ?>
 <body>
     <?php 

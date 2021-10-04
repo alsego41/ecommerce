@@ -80,6 +80,10 @@ p {
 	padding: 10px 15px;
 }
 
+.addx__shortcut a {
+	text-decoration: none;
+}
+
 .addx__item {
 	width: 100%;
 	display: flex;

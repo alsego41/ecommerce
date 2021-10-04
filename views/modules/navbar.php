@@ -7,7 +7,7 @@
     <nav class='navbar'>
         <ul class='ul__navbar'>
             <li class='ul__navbar--item'>
-                <a href='#'>Productos</a>
+                <a href='../controllers/adminLandingPage.php'>Productos</a>
             </li>
             <li class='ul__navbar--item'>
                 <a href='#'>Stocks</a>
