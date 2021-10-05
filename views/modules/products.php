@@ -20,6 +20,7 @@
                             <p class='products__stock--text'>$result[productStock]</p>
                             <p class='products__stock--text'>+</p>
                         </div>
+                        <p class='products__price'>$result[productPrice]</p>
                     </div>";
                 }
             } else {
