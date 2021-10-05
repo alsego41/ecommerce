@@ -12,7 +12,8 @@
         // fetchAllCategories()
         fichaNewProduct(fetchAllCategories());
         if (isset($_POST['btnAddProduct'])){
-            createProduct();
+            $newProductId = createProduct();
+            header("location: product.php?prodId=$newProductId&preview=true");
             // header('location: addproduct.php');
         }
     ?>

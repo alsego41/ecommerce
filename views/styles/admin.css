@@ -25,6 +25,8 @@ p {
 	--purple: rgb(141, 65, 255);
 	--lightPurple: rgb(190, 192, 255);
 	--gray: rgb(90, 90, 90);
+	--aqua: rgb(2, 181, 187);
+	--shadow1: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .header {

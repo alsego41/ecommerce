@@ -24,10 +24,13 @@
             $stmt->bind_param("sisissssd", $name, $stock, $state, $categoryId, $brand, $model, $ubication, $description, $price);
 
             $stmt->execute();
+            $lastId = $stmt->insert_id;
 
             $stmt->close();
             $conn->close();
+            return $lastId;
             // header('location: ../controllers/addproduct.php');
+            // header("location: product.php?prodId=$lastId&?preview");
         }
     }
 
