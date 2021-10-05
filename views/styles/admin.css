@@ -151,6 +151,10 @@ p {
 	/* justify-content: space-between; */
 	background-color: white;
 }
+.products__actions a {
+	text-decoration: none;
+	display: inline;
+}
 
 .products__actions--text {
 	/* margin: 0px !important; */
@@ -281,4 +285,15 @@ p {
 	margin: 0;
 	display: flex;
 	justify-content: flex-end;
+}
+
+.product__container--priceCat {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	column-gap: 25px;
+}
+
+.product__container--priceCat .product__input,
+.product__container--priceCat .product__select {
+	grid-row: 2/3;
 }

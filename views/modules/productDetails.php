@@ -6,14 +6,16 @@
                     <label for='prodName'>Nombre del Producto</label>
                     <input type='text' name='prodName' id='prodName' class='product__input'>
                 </div>
-                <div class='product__container--row'>
+                <div class='product__container--row product__container--priceCat'>
                     <label for='categories'>Categoría</label>
                     <select name='categories' id='productCategories' class='product__select'>";   
         while ($result = mysqli_fetch_assoc($categories)){
         echo            "<option value='$result[categoryName]'>$result[categoryName]</option>";
         };
         echo "
-                </select>
+                    </select>
+                    <label for='prodPrice'>Precio</label>
+                    <input type='number' step='any' min='0' value='0' name='prodPrice' class='product__input'>
                 </div>
                 <div class='product__container--row product__location'>
                     <label for='prodStock'>Inventario</label>
@@ -49,5 +51,3 @@
 
 <!-- <button class='product__stock--actions'>-</button> -->
 <!-- <button class='product__stock--actions'>+</button> -->
-
-

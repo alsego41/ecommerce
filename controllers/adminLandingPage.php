@@ -2,6 +2,7 @@
     require_once "../views/modules/pageHead.php";
     head('Inicio - Administrador');
 ?>
+
 <body>
     <?php 
         // require_once "../views/modules/header.php";
@@ -19,16 +20,16 @@
                     $textAdd = 'Agregar productos';
                     require_once "../views/modules/addShortcut.php";
                 ?>
-        </div>
-        <div class="categories__container">
-            <ul>
-                <?php
+            </div>
+            <div class="categories__container">
+                <ul>
+                    <?php
                     include('../models/queryCategories.php');
                     require_once '../views/modules/categories.php';
                     renderCategories(fetchAllCategories());
                 ?>
-            </ul>
-        </div>
+                </ul>
+            </div>
         </div>
         <div class="productslist">
             <?php
@@ -36,19 +37,19 @@
                 require_once '../views/modules/products.php';
 
                 if (isset($_GET['categoryId'])){
-                    // echo "<h1>Setted</h1>";
+                    // include('../views/modules/searchBar.php');
                     renderProduct(fetchProductByCategory($_GET['categoryId']));
                 } else {
                     // include('../views/modules/searchBar.php');
                     renderProduct(fetchAllProducts());
                 }
-                // need to add checkboxs
-                ?>
+            ?>
         </div>
     </main>
 
     <script>
-        
+
     </script>
 </body>
+
 </html>

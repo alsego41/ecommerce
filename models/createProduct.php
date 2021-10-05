@@ -12,13 +12,14 @@
         $model = $_POST['prodModel'];
         $ubication = $_POST['prodUbication'];
         $description = $_POST['prodDescription'];
+        $price = $_POST['prodPrice'];
         // state se refleja como 'on' cambiar a true/false
-        $sql = "INSERT INTO products2 (productName, productStock, productState, categoryId, productBrand, productModel, productUbication, productDescription) VALUES (?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO products2 (productName, productStock, productState, categoryId, productBrand, productModel, productUbication, productDescription, productPrice) VALUES (?,?,?,?,?,?,?,?,?)";
 
         $conn = connect();
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param("sisissss", $name, $stock, $state, $categoryId, $brand, $model, $ubication, $description);
+        $stmt->bind_param("sisissssd", $name, $stock, $state, $categoryId, $brand, $model, $ubication, $description, $price);
 
         $stmt->execute();
 
