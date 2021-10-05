@@ -1,7 +1,7 @@
 <?php
     function fichaNewProduct($categories){
         echo "
-            <form class='productFicha__container' action='../models/createProduct.php' method='post'>
+            <form class='productFicha__container' action='' method='post'>
                 <div class='product__container--row'>
                     <label for='prodName'>Nombre del Producto</label>
                     <input type='text' name='prodName' id='prodName' class='product__input'>
