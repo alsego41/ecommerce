@@ -10,12 +10,12 @@
         <div class='publication__images'>
         </div>
         <div class='publication__details--head'>
-            <p><?php echo $product['productName'];?></p>
-            <p><?php echo $product['productDescription'];?></p>
+            <p class='publication__text--primary'><?php echo $product['productName'];?></p>
+            <p class='publication__text--secondary'><?php echo $product['productDescription'];?></p>
         </div>
         <div class='publication__cart'>
             <div class="publication__price publication__cart--section">
-                <p class='publication__text--price'>ARS <?php echo $product['productPrice']; ?></p>
+                <p class='publication__text--primary'>ARS <?php echo $product['productPrice']; ?></p>
             </div>
             <div class="publication__payment publication__cart--section">
                 <p class='publication__text--title'>Medios de pago</p>

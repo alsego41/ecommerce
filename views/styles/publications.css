@@ -40,7 +40,7 @@ p {
 .publication__main--header {
 	display: grid;
 	/* grid-template-columns: repeat(3, 1fr); */
-	grid-template-columns: 2fr 2fr 1fr;
+	grid-template-columns: 1.5fr 1.5fr 1fr;
 	padding: 15px;
 }
 
@@ -118,7 +118,7 @@ p {
 	margin-bottom: 0 !important;
 }
 
-.publication__text--price {
+.publication__text--primary {
 	font-weight: 800;
 	font-size: 40px;
 	color: var(--gray);
