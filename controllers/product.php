@@ -9,6 +9,8 @@
             include('../models/queryProducts.php');
             include('../views/modules/publication.php');
             renderPublication(mysqli_fetch_assoc(fetchOneProduct($_GET['prodId'])));
+            include('../views/modules/adminPublActions.php');
+            showAdminActions($_GET['prodId']);
         }
     } else {
         echo "<p>NO Preview</p>";

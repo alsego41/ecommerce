@@ -1,5 +1,5 @@
 <?php
-    function createProduct(){
+    function editProduct($id){
         // include("database.php");
         // include('queryCategories.php');
         // echo "<p>".var_dump($_POST)."</p>";
@@ -21,7 +21,7 @@
             $description = $_POST['prodDescription'];
             $price = $_POST['prodPrice'];
             // state se refleja como 'on' cambiar a true/false
-            $sql = "INSERT INTO products2 (productName, productStock, productState, categoryId, productBrand, productModel, productUbication, productDescription, productPrice) VALUES (?,?,?,?,?,?,?,?,?)";
+            $sql = "UPDATE products2 SET productName=?, productStock=?, productState=?, categoryId=?, productBrand=?, productModel=?, productUbication=?, productDescription=?, productPrice=? WHERE productId=$id";
 
             $conn = connect();
             $stmt = $conn->prepare($sql);
@@ -29,11 +29,11 @@
             $stmt->bind_param("siiissssd", $name, $stock, $state, $categoryId, $brand, $model, $ubication, $description, $price);
 
             $stmt->execute();
-            $lastId = $stmt->insert_id;
+            // $lastId = $stmt->insert_id;
 
             $stmt->close();
             $conn->close();
-            return $lastId;
+            // return $lastId;
             // header('location: ../controllers/addproduct.php');
             // header("location: product.php?prodId=$lastId&?preview");
         }

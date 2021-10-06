@@ -38,10 +38,12 @@
 
                 if (isset($_GET['categoryId'])){
                     // include('../views/modules/searchBar.php');
-                    renderProduct(fetchProductByCategory($_GET['categoryId']));
+                    $products = fetchProductByCategory($_GET['categoryId']);
+                    $qty = mysqli_num_rows($products);
+                    renderProduct($products, $qty);
                 } else {
                     // include('../views/modules/searchBar.php');
-                    renderProduct(fetchAllProducts());
+                    renderProduct(fetchAllProducts(), 1);
                 }
             ?>
         </div>
