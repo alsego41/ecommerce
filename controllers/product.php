@@ -1,5 +1,7 @@
 <?php 
     require_once "../views/modules/pageHead.php";
+    require_once "../views/modules/header.php";
+    require_once "../views/modules/navbar.php";
     // head('Producto - Administrador');
     // echo var_dump($_GET);
     if (isset($_GET['preview'])){
