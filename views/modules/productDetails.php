@@ -1,5 +1,5 @@
-<?php ob_start();?>
-<?php
+<?php 
+    ob_start();
     function fichaNewProduct($categories){
         ?>
 <form class='productFicha__container' action='' method='post'>
@@ -114,5 +114,4 @@ function fichaEditProduct($categories, $product){
 </form>
 <?php
 }
-?>
-<?php ob_end_flush(); ?>
+ob_end_flush(); ?>
