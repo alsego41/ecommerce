@@ -51,7 +51,9 @@
 </form>
 ;
 <?php
+ob_end_flush();
 }
+ob_start();
 function fichaEditProduct($categories, $product){
 ?>
 <form class='productFicha__container' action='' method='post'>
