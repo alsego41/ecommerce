@@ -17,14 +17,19 @@ function renderProduct($products, $qty){
 <?php
     while ($result = mysqli_fetch_assoc($products)){
         if ($result['productState'] == 1){
-            $state = 'ACTIVADO';
-        } else $state = 'DESACTIVADO';
+            $state = 'Activado';
+            $textClass = 'active';
+        } else {
+            $state = 'Desactivado';
+            $textClass = 'inactive';
+        }
 ?>
 
 <div class='products__box'>
     <p class='products__maintext'><?php echo $result['productName']?></p>
     <div class='products__actions'>
-        <p class='products__actions--text'>
+        <p class='products__actions--text products__actions--text<?php echo $textClass?> '><?php echo $state?></p>
+        <p class='products__actions--text products__actions--clickable'>
             <a href='product.php?prodId=<?php echo $result['productId']?>&preview=true'>EDITAR</a>
         </p>
     </div>

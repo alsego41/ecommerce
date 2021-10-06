@@ -1,8 +1,8 @@
-En cuanto se filtra una categoría
--> agregar en la lista de filtros uno que diga Todos
+<!-- En cuanto se filtra una categoría
+-> agregar en la lista de filtros uno que diga Todos -->
 
-Volver a mostrar el estado actual del producto
--> Activado o Desactivado, pero que sea solo informativo
+<!-- Volver a mostrar el estado actual del producto
+-> Activado o Desactivado, pero que sea solo informativo -->
 
 Agregar barra de busqueda en el listado de productos
 

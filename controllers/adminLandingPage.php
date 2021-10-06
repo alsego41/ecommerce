@@ -24,10 +24,10 @@
             <div class="categories__container">
                 <ul>
                     <?php
-                    include('../models/queryCategories.php');
-                    require_once '../views/modules/categories.php';
-                    renderCategories(fetchAllCategories());
-                ?>
+                        include('../models/queryCategories.php');
+                        require_once '../views/modules/categories.php';
+                        renderCategories(fetchAllCategories());
+                    ?>
                 </ul>
             </div>
         </div>
