@@ -2,7 +2,7 @@
     // require_once "../views/modules/pageHead.php";
     
     function renderPublication($product){
-        head("$product[productName] - Administrador");
+        head("$product[productName] - Administrador", '');
         // echo var_dump($product);
         ?>
 <div class="publication__block">

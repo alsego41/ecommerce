@@ -1,5 +1,5 @@
 <?php 
-    function head($pageTitle){
+    function head($pageTitle, $styleFile){
         echo "
         <!DOCTYPE html>
         <html lang='en'>
@@ -10,6 +10,7 @@
             <title>$pageTitle</title>
             <link rel='stylesheet' href='../views/styles/admin.css'>
             <link rel='stylesheet' href='../views/styles/publications.css'>
+            <link rel='stylesheet' href='$styleFile'>
         </head>";
     }
 ?>

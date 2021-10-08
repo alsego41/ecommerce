@@ -4,11 +4,16 @@
 <!-- Volver a mostrar el estado actual del producto
 -> Activado o Desactivado, pero que sea solo informativo -->
 
-Agregar barra de busqueda en el listado de productos
+<!-- Cambiar cotejamiento de mysql para \_cs para ser case sensitive
+Ver cryptographic nonce, sessions -->
+
+Poner wrapper para img y ver de nuevo el object-fit
+
+Agregar barra de busqueda en el listado de productos - ajax?
 
 Agregar iconos
 
-Agregar login, ver bien el tema authentication
+<!-- Agregar login, ver bien el tema authentication -->
 
 Resolver temas de las rutas
 -> Fijarse o revisar un poco mas otras estructuras de MVC

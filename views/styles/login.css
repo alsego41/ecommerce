@@ -1,0 +1,36 @@
+:root {
+	--red: rgb(226, 112, 112);
+	--skyblue: rgb(96, 228, 255);
+	--yellow: rgb(246, 206, 76);
+	--pink: rgb(241, 152, 255);
+	--purple: rgb(141, 65, 255);
+	--lightPurple: rgb(190, 192, 255);
+	--gray: rgb(90, 90, 90);
+	--aqua: rgb(2, 181, 187);
+	--shadow1: 0px 3px 6px rgba(0, 0, 0, 0.16);
+	--lightgray: rgb(210, 198, 198);
+}
+
+body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.form__container {
+	background-color: var(--skyblue);
+	width: 30%;
+}
+
+.form__box {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}

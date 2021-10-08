@@ -1,6 +1,12 @@
 <?php 
     require_once "../views/modules/pageHead.php";
-    head('Agregar nuevo producto - Administrador');
+    head('Agregar nuevo producto - Administrador','');
+    require_once "sessions.php";
+    if (!isLogged()){
+        header('location: login.php');
+    } 
+    else 
+{
 ?>
 
 <body>
@@ -18,3 +24,7 @@
         }
     ?>
 </body>
+
+<?php
+}
+?>

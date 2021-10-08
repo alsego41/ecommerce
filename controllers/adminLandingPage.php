@@ -1,17 +1,18 @@
 <?php 
     require_once "../views/modules/pageHead.php";
-    head('Inicio - Administrador');
+    head('Inicio - Administrador', '');
+    require_once "sessions.php";
+    if (!isLogged()){
+        echo "NOT Logged";
+        header('location: login.php');
+    } 
+    else 
+{
 ?>
 
 <body>
     <?php 
-        // require_once "../views/modules/header.php";
         require_once "../views/modules/navbar.php";
-        // echo md5(rand(1000,5000))."<br>";
-        // echo md5(rand(1000,5000))."<br>";
-        // echo md5(rand(1000,5000))."<br>";
-        // echo md5(rand(1000,5000))."<br>";
-        // echo md5(rand(1000,5000))."<br>";
     ?>
     <main class="data__container">
         <div class="leftpanel__container">
@@ -55,3 +56,7 @@
 </body>
 
 </html>
+
+<?php 
+}
+?>
