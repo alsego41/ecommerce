@@ -10,6 +10,10 @@
     include './views/head.php';
     include './views/header.php';
     include './controllers/addcart.php';
-    $cart = explode(',',substr($_COOKIE['cart'], 1, -1));
-    Product::renderSelected($cart);
+    if ($_COOKIE['cart'] != '[]'){
+        $cart = explode(',',substr($_COOKIE['cart'], 1, -1));
+        Product::renderSelected($cart);
+    } else {
+        include './views/emptyCart.php';
+    }
 ?>

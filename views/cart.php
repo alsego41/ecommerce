@@ -1,7 +1,7 @@
 <div class="product__cart--container">
     <?php
     $i=0;
-foreach (Product::$listProd as $product) {
+    foreach (Product::$listProd as $product) {
     ?>
 
     <div class="product__cart--box">
@@ -16,8 +16,9 @@ foreach (Product::$listProd as $product) {
             <input type="number" name="product-<?php echo $product['productId']; ?>-qty"
                 id="product-<?php echo $product['productId']; ?>-qty"
                 value='<?php echo Product::$qtySelectedOnes[$i]; $i++; ?>' min='0'
-                max='<?php echo $product['productStock']; ?>'>
-            <button class='product__cart--delete'>X</button>
+                max='<?php echo $product['productStock']; ?>' onchange="editQty(<?php echo $product['productId']; ?>)">
+            <button class='product__cart--delete'
+                onclick="removeProduct(<?php echo $product['productId']; ?>)">X</button>
         </div>
     </div>
 

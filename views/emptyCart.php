@@ -1,0 +1,1 @@
+<p>El carrito esta vacío, vuelve al inicio y agrega nuevos productos</p>

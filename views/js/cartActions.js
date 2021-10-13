@@ -4,13 +4,9 @@ count.innerText = JSON.parse(getCookie('cart')).length
 
 const addToCart = (id, state) => {
 	cart = JSON.parse(getCookie('cart'))
-	// console.log(id)
 	if (state == 1) {
-		// console.log(`Producto ${id} agregado al carrito`)
 		cart.push(id)
-		// console.log(cart)
 		document.cookie = `cart=${JSON.stringify(cart)}`
-		// Cookie retrieve
 	}
 	count.innerText = cart.length
 }
@@ -25,4 +21,21 @@ function getCookie(name) {
 	)
 	return matches ? decodeURIComponent(matches[1]) : undefined
 }
-// console.log(JSON.parse(getCookie('cart')))
+
+const removeProduct = (id) => {
+	cart = JSON.parse(getCookie('cart'))
+	cart = cart.filter((product) => product !== id)
+	document.cookie = `cart=${JSON.stringify(cart)}`
+	location.reload()
+}
+
+const editQty = (id) => {
+	cart = JSON.parse(getCookie('cart'))
+	let prod = document.querySelector(`#product-${id}-qty`).value
+	cart = cart.filter((product) => product !== id)
+	for (let i = 0; i < prod; i++) {
+		cart.push(id)
+	}
+	document.cookie = `cart=${JSON.stringify(cart)}`
+	count.innerText = JSON.parse(getCookie('cart')).length
+}

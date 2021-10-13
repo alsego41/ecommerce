@@ -1,1 +1,1 @@
-<script src="./views/js/addcart.js"></script>
+<script src="./views/js/cartActions.js"></script>
