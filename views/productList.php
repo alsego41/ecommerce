@@ -43,7 +43,8 @@
         }
         } else if (Product::$privilege == 'user'){
             while ($product = Product::$listProd->fetch_assoc()){
-                if ($product['productState'] == 1 || $product['productState'] == 0){
+                if ($product['productState'] == 1 ){
+                // if ($product['productState'] == 1 || $product['productState'] == 0){
                     ?>
 <div
     class='products__box products__box--<?php if ($product['productState'] == 1) echo 'active'; else echo 'inactive';?>'>

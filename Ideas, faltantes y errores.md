@@ -36,4 +36,4 @@ Habilitar publicaciones de los productos
 Checkear al momento de agregar al carrito en la homepage si hay stock, para impedir que agregue demas de lo existente
 -> de ultima remover agregado rapido y q el usuario se dirija a la publicacion (q seria de lo mas conveniente la verdad y realista...)
 
-Habilitar funciones del cart.php, remover producto del carrito o reducir/aumentar cantidad de un producto
+<!-- Habilitar funciones del cart.php, remover producto del carrito o reducir/aumentar cantidad de un producto -->
