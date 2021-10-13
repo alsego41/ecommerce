@@ -2,6 +2,10 @@ let cart = []
 let count = document.querySelector('#carritoCount')
 if (!getCookie('cart')) {
 	document.cookie = `cart=${JSON.stringify(cart)}`
+	count.innerText = JSON.parse(getCookie('cart')).length
+} else {
+	cart = JSON.parse(getCookie('cart'))
+	count.innerText = JSON.parse(getCookie('cart')).length
 }
 
 const addToCart = (id, state) => {
@@ -10,7 +14,7 @@ const addToCart = (id, state) => {
 		cart.push(id)
 		document.cookie = `cart=${JSON.stringify(cart)}`
 	}
-	count.innerText = cart.length
+	count.innerText = JSON.parse(getCookie('cart')).length
 }
 
 function getCookie(name) {
