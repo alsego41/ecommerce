@@ -1,17 +1,19 @@
 let cart = []
+let count = document.querySelector('#carritoCount')
+count.innerText = JSON.parse(getCookie('cart')).length
+
 const addToCart = (id, state) => {
+	cart = JSON.parse(getCookie('cart'))
 	// console.log(id)
 	if (state == 1) {
-		console.log(`Producto ${id} agregado al carrito`)
+		// console.log(`Producto ${id} agregado al carrito`)
 		cart.push(id)
-		document.querySelector('#carritoCount').innerText = cart.length
-		console.log(cart)
+		// console.log(cart)
 		document.cookie = `cart=${JSON.stringify(cart)}`
 		// Cookie retrieve
 	}
+	count.innerText = cart.length
 }
-
-document.querySelector('#carritoCount').innerText = cart.length
 
 function getCookie(name) {
 	let matches = document.cookie.match(
@@ -23,4 +25,4 @@ function getCookie(name) {
 	)
 	return matches ? decodeURIComponent(matches[1]) : undefined
 }
-console.log(JSON.parse(getCookie('cart')))
+// console.log(JSON.parse(getCookie('cart')))
