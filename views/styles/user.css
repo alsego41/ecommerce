@@ -9,10 +9,18 @@
 	width: 100%;
 	background-color: white;
 	border-radius: 10px;
+	/* Images not .png will be displayed differently if there are borders in the others */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	box-shadow: var(--shadow1);
+}
+
+.products__box--inactive {
+	background-color: var(--lightiestgray);
 }
 
 .products__image--main {
@@ -45,4 +53,18 @@
 	border-radius: 5px;
 	padding: 10px 15px;
 	color: white;
+}
+
+.products__cart:hover {
+	cursor: pointer;
+	background-color: var(--darkaqua);
+}
+
+.products__cart--inactive {
+	background-color: var(--red);
+}
+
+.products__cart--inactive:hover {
+	cursor: not-allowed;
+	background-color: var(--red);
 }

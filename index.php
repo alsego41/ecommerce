@@ -11,7 +11,6 @@
     include './views/head.php';
     include './views/header.php';
     include './views/userView.php';
-    
     // head('Inicio - Productos', './views/styles/user.css');
     // include('./views/modules/')
     // include('./models/queryCategories.php');

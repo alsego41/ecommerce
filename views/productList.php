@@ -43,16 +43,19 @@
         }
         } else if (Product::$privilege == 'user'){
             while ($product = Product::$listProd->fetch_assoc()){
-                if ($product['productState'] == 1){
+                if ($product['productState'] == 1 || $product['productState'] == 0){
                     ?>
-<div class='products__box'>
+<div
+    class='products__box products__box--<?php if ($product['productState'] == 1) echo 'active'; else echo 'inactive';?>'>
     <img src="https://www.amd.com/system/files/styles/992px/private/2019-06/238593-ryzen-3-vega-pib-left-facing-1260x709_0.png?itok=o-efjbjS"
         alt="Product image" class='products__image--main'>
     <div class="products__details">
         <p class='products__maintext'><?php echo $product['productName']?></p>
         <p class='products__price'>$ <?php echo $product['productPrice']?></p>
-        <div class="products__cart">
-            <p class=''>Add to cart</p>
+        <div
+            class="products__cart products__cart--<?php if ($product['productState'] == 1) echo 'active'; else echo 'inactive';?>">
+            <p class=''>
+                Add to cart</p>
         </div>
     </div>
 </div>

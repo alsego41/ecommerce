@@ -26,3 +26,5 @@ Re-ver estilos de text-area en las publicaciones, algunas no se rompen, ver css,
 
 Armar vistas y todo lo demás faltante del lado del usuario
 -> Finalizar acciones realizables en la pagina de cada producto, x ej. la foto
+
+Guardar carrito en cookies? mostrar con js y dsp al final recuperar la cookie en checkout

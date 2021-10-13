@@ -22,8 +22,15 @@
 
         public static function fetchAll($tableName) {
             $conn = self::connect();
-            // $tableName = "categories2";
             $query = "SELECT * FROM $tableName";
+            $data = $conn->query($query);
+            self::closeConnection($conn);
+            return $data;
+        }
+
+        public static function fetchOneByValue($tableName, $columnName, $value){
+            $conn = self::connect();
+            $query = "SELECT * FROM $tableName WHERE $columnName=$value";
             $data = $conn->query($query);
             self::closeConnection($conn);
             return $data;
