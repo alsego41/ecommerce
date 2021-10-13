@@ -68,3 +68,13 @@
 	cursor: not-allowed;
 	background-color: var(--red);
 }
+
+.carrito {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	background-color: var(--yellow);
+	padding: 10px;
+	color: black;
+	border-radius: 5px;
+}
