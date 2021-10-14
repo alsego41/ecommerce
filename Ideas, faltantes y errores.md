@@ -37,3 +37,7 @@ Checkear al momento de agregar al carrito en la homepage si hay stock, para impe
 -> de ultima remover agregado rapido y q el usuario se dirija a la publicacion (q seria de lo mas conveniente la verdad y realista...)
 
 <!-- Habilitar funciones del cart.php, remover producto del carrito o reducir/aumentar cantidad de un producto -->
+
+Ir descontando stock a la vez q se agrega al carrito?
+-> Pero solo para el usuario, xq sino con algun gracioso los demas no van a poder comprar
+-> Checkear carrito e ir descontando en publicacion¡?

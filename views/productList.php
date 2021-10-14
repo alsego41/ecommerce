@@ -53,11 +53,6 @@
     <div class="products__details">
         <p class='products__maintext'><?php echo $product['productName']?></p>
         <p class='products__price'>$ <?php echo $product['productPrice']?></p>
-        <div class="products__cart products__cart--<?php if ($product['productState'] == 1) echo 'active'; else echo 'inactive';?>"
-            onclick="addToCart(<?php echo $product['productId']?>, <?php echo $product['productState']?>)">
-            <p class=''>
-                Add to cart</p>
-        </div>
     </div>
 </div>
 <?php

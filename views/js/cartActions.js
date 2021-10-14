@@ -8,10 +8,16 @@ if (!getCookie('cart')) {
 	count.innerText = JSON.parse(getCookie('cart')).length
 }
 
-const addToCart = (id, state) => {
+const addToCart = (id, state, availability) => {
+	let qty = document.querySelector('#prodQty').value
+	if (qty > availability) {
+		qty = availability
+	}
 	cart = JSON.parse(getCookie('cart'))
 	if (state == 1) {
-		cart.push(id)
+		for (let index = 0; index < qty; index++) {
+			cart.push(id)
+		}
 		document.cookie = `cart=${JSON.stringify(cart)}`
 	}
 	count.innerText = JSON.parse(getCookie('cart')).length

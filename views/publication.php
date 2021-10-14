@@ -41,20 +41,26 @@
                 <p class='publication__text--terciary'>(<?php echo $product['productStock']; ?> disponibles)</p>
             </div>
             <?php if ($product['productState'] == 0){
-                echo "<div class='publication__button publication__button--inactive publication__cart--section publication__cart--last'>";
+                ?>
+            <div
+                class='publication__button publication__button--inactive publication__cart--section publication__cart--last'>
+                <?php
             } else {
-                echo "<div class='publication__button publication__cart--section publication__cart--last'>";
+                ?>
+                <div class='publication__button publication__cart--section publication__cart--last'
+                    onclick="addToCart(<?php echo $product['productId']?>, <?php echo $product['productState']?>, <?php echo $product['productStock'] ?>)">
+                    <?php
             }?>
-            <!-- <div class="publication__button publication__cart--section publication__cart--last"> -->
-            <p class="publication__button--text">Agregar al carrito</p>
-            <!-- <img src="" alt=""> -->
+                    <!-- <div class="publication__button publication__cart--section publication__cart--last"> -->
+                    <p class="publication__button--text">Agregar al carrito</p>
+                    <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+        </div>
+        <div class="publication__extra">
+            <p class="publication__text--title">Marca</p>
+            <p class="publication__text--secondary"><?php echo $product['productBrand'] ?></p>
+            <p class="publication__text--title">Modelo</p>
+            <p class="publication__text--secondary"><?php echo $product['productModel'] ?></p>
         </div>
     </div>
-</div>
-<div class="publication__extra">
-    <p class="publication__text--title">Marca</p>
-    <p class="publication__text--secondary"><?php echo $product['productBrand'] ?></p>
-    <p class="publication__text--title">Modelo</p>
-    <p class="publication__text--secondary"><?php echo $product['productModel'] ?></p>
-</div>
-</div>
