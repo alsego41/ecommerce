@@ -30,7 +30,7 @@
 
         public static function fetchOneByValue($tableName, $columnName, $value){
             $conn = self::connect();
-            $query = "SELECT * FROM $tableName WHERE $columnName=$value";
+            $query = "SELECT * FROM $tableName WHERE BINARY $columnName='$value'";
             $data = $conn->query($query);
             self::closeConnection($conn);
             return $data;

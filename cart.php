@@ -1,6 +1,10 @@
 <?php 
     spl_autoload_register(function ($class_name) {
-        require_once "./classes/$class_name.php";
+        if (file_exists("./classes/$class_name.php")){
+            require_once "./classes/$class_name.php";
+        } else if (file_exists("./controllers/$class_name.php")){
+            require_once "./controllers/$class_name.php";
+        }
     });
 
     $title = 'Carrito - Ecommerce';
@@ -8,6 +12,9 @@
     $styles[] = './views/styles/user.css';
     $styles[] = './views/styles/header.css';
     include './views/head.php';
+    if (Session::check()){
+        include './views/hiadmin.php';
+    }
     include './views/header.php';
     include './controllers/addcart.php';
     if (isset($_COOKIE['cart'])){

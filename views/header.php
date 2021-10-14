@@ -4,5 +4,5 @@
         <img src="../assets/cart.png" alt="Carrito">
         <p class="carrito__count" id="carritoCount"></p>
     </div>
-    <img src='../assets/profile.png' alt='Account'>
+    <img src='../assets/profile.png' alt='Account' onclick="document.location.href = './login.php'">
 </header>
