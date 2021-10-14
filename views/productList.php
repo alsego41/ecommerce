@@ -46,8 +46,8 @@
                 if ($product['productState'] == 1 ){
                 // if ($product['productState'] == 1 || $product['productState'] == 0){
                     ?>
-<div
-    class='products__box products__box--<?php if ($product['productState'] == 1) echo 'active'; else echo 'inactive';?>'>
+<div class='products__box products__box--<?php if ($product['productState'] == 1) echo 'active'; else echo 'inactive';?>'
+    onclick="document.location.href = `./product.php?pid=${<?php echo $product['productId']?>}`">
     <img src="https://www.amd.com/system/files/styles/992px/private/2019-06/238593-ryzen-3-vega-pib-left-facing-1260x709_0.png?itok=o-efjbjS"
         alt="Product image" class='products__image--main'>
     <div class="products__details">

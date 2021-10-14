@@ -4,6 +4,7 @@
         public static $listRows;
         public static $privilege;
         public static $qtySelectedOnes;
+        public static $currProd;
 
         public static function renderAll($privilege) {
             self::$privilege = $privilege;
@@ -26,6 +27,11 @@
                 self::$qtySelectedOnes[] = $value;
             }
             include_once "./views/cart.php";
+        }
+
+        public static function renderPublication($id) {
+            self::$currProd = self::fetchOneByValue('products2','productId',$id)->fetch_assoc();
+            include_once "./views/publication.php";
         }
         
     }
