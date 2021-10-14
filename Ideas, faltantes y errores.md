@@ -15,12 +15,12 @@ Agregar iconos
 
 <!-- Agregar login, ver bien el tema authentication -->
 
-Resolver temas de las rutas
--> Fijarse o revisar un poco mas otras estructuras de MVC
+<!-- Resolver temas de las rutas
+-> Fijarse o revisar un poco mas otras estructuras de MVC -->
 
 Ver como subir fotos, capaz con FileZilla o algo FTP puede ir
 
-Re-ver estilos de text-area en las publicaciones, algunas no se rompen, ver css, breaks
+<!-- Re-ver estilos de text-area en las publicaciones, algunas no se rompen, ver css, breaks -->
 
 ---
 
@@ -31,13 +31,16 @@ Re-ver estilos de text-area en las publicaciones, algunas no se rompen, ver css,
 
 ---
 
-Habilitar publicaciones de los productos
+<!-- Habilitar publicaciones de los productos -->
 
-Checkear al momento de agregar al carrito en la homepage si hay stock, para impedir que agregue demas de lo existente
--> de ultima remover agregado rapido y q el usuario se dirija a la publicacion (q seria de lo mas conveniente la verdad y realista...)
+<!-- Checkear al momento de agregar al carrito en la homepage si hay stock, para impedir que agregue demas de lo existente
+-> de ultima remover agregado rapido y q el usuario se dirija a la publicacion (q seria de lo mas conveniente la verdad y realista...) -->
 
 <!-- Habilitar funciones del cart.php, remover producto del carrito o reducir/aumentar cantidad de un producto -->
 
-Ir descontando stock a la vez q se agrega al carrito?
+<!-- Ir descontando stock a la vez q se agrega al carrito?
 -> Pero solo para el usuario, xq sino con algun gracioso los demas no van a poder comprar
--> Checkear carrito e ir descontando en publicacion¡?
+-> Checkear carrito e ir descontando en publicacion¡? -->
+
+--> Cuando se entra al carrito ajustar la cantidad al stock disponible
+---> Y avisarle al usuario que se le ha reducido la cantidad solicitada debido a que no hay esa cantidad disponible
