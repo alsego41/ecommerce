@@ -23,13 +23,13 @@
             header('Location: ./');
         } else {
             Product::renderPublication($_GET['pid']);
-            include './views/publicationOptions.php';
+            Product::showOptions();
         }
     } else {
         $styles[] = './views/styles/user.css';
         include './views/head.php';
-        include './controllers/addcart.php';
         include './views/header.php';
+        include './controllers/addcart.php';
         if (!isset($_GET['pid'])){
             header('Location: ./');
         } else {

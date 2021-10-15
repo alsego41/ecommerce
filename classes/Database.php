@@ -28,9 +28,37 @@
             return $data;
         }
 
-        public static function fetchOneByValue($tableName, $columnName, $value){
+        public static function fetchRowByValue($tableName, $columnName, $value){
             $conn = self::connect();
             $query = "SELECT * FROM $tableName WHERE BINARY $columnName='$value'";
+            $data = $conn->query($query);
+            self::closeConnection($conn);
+            return $data;
+        }
+
+        public static function createRow($tableName, $columns, $values) {
+            $conn = self::connect();
+            $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
+            $data = $conn->query($query);
+            self::closeConnection($conn);
+            return $data;
+        }
+
+        public static function deleteRow($tableName, $columnName, $value) {
+            $conn = self::connect();
+            $query = "DELETE FROM $tableName WHERE BINARY $columnName='$value'";
+            $data = $conn->query($query);
+            self::closeConnection($conn);
+            return $data;
+        }
+
+        public static function updateRow($tableName, $columns, $values) {
+            $conn = self::connect();
+            $updateString = "";
+            for ($i=0; $i < count($columns); $i++) { 
+                $updateString .= "$columns[$i]=$values[$i]";
+            }
+            $query = "UPDATE $tableName SET $updateString";
             $data = $conn->query($query);
             self::closeConnection($conn);
             return $data;

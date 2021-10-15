@@ -9,7 +9,7 @@
         }
 
         public static function checkName() {
-            self::$currentCategory = self::fetchOneByValue('categories2', 'categoryId', $_GET['categoryId'])->fetch_assoc();
+            self::$currentCategory = self::fetchRowByValue('categories2', 'categoryId', $_GET['categoryId'])->fetch_assoc();
             return self::$currentCategory['categoryName'];
         }
     }
