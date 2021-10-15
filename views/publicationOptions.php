@@ -3,7 +3,7 @@
 ?>
 
 <div class="preview__actions">
-    <a href="editproduct.php?pid=<?php echo $product['productId']?>">
+    <a href="?editpid=<?php echo $product['productId']?>">
         <div class="publication__button publication__button--edit">
             <p class="publication__button--text">Editar publicación</p>
         </div>
@@ -21,7 +21,7 @@
             <div class="publication__button">
                 <p class="publication__button--text">Cancelar</p>
             </div>
-            <a href="deleteproduct.php?pid=<?php echo $product['productId']?>">
+            <a href="?deletepid=<?php echo $product['productId']?>">
                 <div class="publication__button publication__button--delete">
                     <p class="publication__button--text">Eliminar</p>
                 </div>

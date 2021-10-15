@@ -30,7 +30,7 @@
     <div class='products__actions'>
         <p class='products__actions--text products__actions--text<?php echo $textClass?> '><?php echo $state?></p>
         <p class='products__actions--text products__actions--clickable'>
-            <a href='product.php?pid=<?php echo $product['productId']?>&preview=true'>EDITAR</a>
+            <a href='product.php?pid=<?php echo $product['productId']?>'>EDITAR</a>
         </p>
     </div>
     <div class='products__stock'>

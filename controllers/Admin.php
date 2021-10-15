@@ -1,7 +1,7 @@
 <?php
     class Admin extends Database {
         public static function tryLogin($username, $psw) {
-            $data = self::fetchOneByValue('admins', 'userName', $username);
+            $data = self::fetchRowByValue('admins', 'userName', $username);
             $data = $data->fetch_assoc();
             if ($data && $data != NULL) {
                 if (password_verify($psw, $data['userPassword'])){

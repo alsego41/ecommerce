@@ -46,7 +46,7 @@
 
         public static function deleteRow($tableName, $columnName, $value) {
             $conn = self::connect();
-            $query = "DELETE FROM $tableName WHERE BINARY $columnName='$value'";
+            $query = "DELETE FROM $tableName WHERE BINARY $columnName=$value";
             $data = $conn->query($query);
             self::closeConnection($conn);
             return $data;

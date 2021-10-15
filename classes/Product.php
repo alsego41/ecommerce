@@ -34,11 +34,16 @@
             include_once "./views/publication.php";
         }
 
+        public static function renderForm() {
+            include_once "./views/productForm.php";
+        }
+
         public static function showOptions() {
             include_once './views/publicationOptions.php';
         }
 
         public static function create() {
+            include_once './views/productform.php';
             // self::createRow();
         }
 

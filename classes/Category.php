@@ -3,8 +3,12 @@
         public static $listCat;
         public static $currentCategory;
 
-        public static function render() {
+        public static function fillList() {
             self::$listCat = self::fetchAll('categories2');
+        }
+
+        public static function render() {
+            self::fillList();
             include_once "./views/categoryList.php";
         }
 
