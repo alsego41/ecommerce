@@ -7,3 +7,14 @@
 	color: white;
 	padding: 20px 100px;
 }
+
+.admin__head {
+	background-color: var(--orange);
+	width: 100%;
+	display: flex;
+	box-shadow: var(--shadow1);
+}
+
+.admin__head p {
+	margin: 20px auto;
+}

@@ -9,15 +9,19 @@
     
     $title = 'Inicio - Ecommerce';
     $styles[] = './views/styles/main.css';
-    $styles[] = './views/styles/user.css';
     $styles[] = './views/styles/header.css';
     $styles[] = './views/styles/categories.css';
-    include './views/head.php';
     if (Session::check()){
-        include './views/hiadmin.php';
+        $styles[] = './views/styles/admin.css';
+        include './views/head.php';
+        include './views/adminheader.php';
+        include './views/header.php';
+        include './views/adminView.php';
+    } else {
+        $styles[] = './views/styles/user.css';
+        include './views/head.php';
+        include './views/header.php';
+        include './views/userView.php';
+        include './controllers/addcart.php';
     }
-    include './views/header.php';
-    include './views/userView.php';
-    
-    include './controllers/addcart.php';
 ?>
