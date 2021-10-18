@@ -44,3 +44,16 @@ Ver como subir fotos, capaz con FileZilla o algo FTP puede ir
 
 --> Cuando se entra al carrito ajustar la cantidad al stock disponible
 ---> Y avisarle al usuario que se le ha reducido la cantidad solicitada debido a que no hay esa cantidad disponible
+
+---
+
+Admin
+
+<!-- - En inicio hace falta el shortcut para agregar un nuevo producto -->
+
+- Revisar porque en modo Admin sale que la página está en gallego
+
+- Admin View y User View comparten la lista de categorías
+  -> Tal vez se puede independizar de estos dos
+
+<!-- - Para crear un producto y pasarlo a la clase DB, tengo que enviarlo como string el cual solo debe tener cada valor separado con una coma y tener las comillas simples. Por ultimo encapsularlo con parentesis -->

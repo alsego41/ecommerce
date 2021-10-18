@@ -38,10 +38,12 @@
 
         public static function createRow($tableName, $columns, $values) {
             $conn = self::connect();
-            $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
-            $data = $conn->query($query);
+            $query = "INSERT INTO $tableName $columns VALUES $values";
+            // echo $query;
+            $conn->query($query);
+            $lastId = $conn->insert_id;
             self::closeConnection($conn);
-            return $data;
+            return $lastId;
         }
 
         public static function deleteRow($tableName, $columnName, $value) {

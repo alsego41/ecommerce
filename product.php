@@ -28,8 +28,12 @@
             }
             if (isset($_GET['create'])){
                 Product::renderForm();
-                // Product::renderPublication($_GET['pid']);
-                // Product::showOptions();
+                if (isset($_POST['btnAddProduct'])){
+                    $data = Product::getFormData();
+                    $lastId = Product::create($data);
+                    
+                    header("Location: ./product.php?pid=$lastId");
+                }
             }
             if (isset($_GET['deletepid'])){
                 Product::delete($_GET['deletepid']);

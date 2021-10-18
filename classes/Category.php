@@ -12,8 +12,8 @@
             include_once "./views/categoryList.php";
         }
 
-        public static function checkName() {
-            self::$currentCategory = self::fetchRowByValue('categories2', 'categoryId', $_GET['categoryId'])->fetch_assoc();
+        public static function checkName($id) {
+            self::$currentCategory = self::fetchRowByValue('categories2', 'categoryId', $id)->fetch_assoc();
             return self::$currentCategory['categoryName'];
         }
     }

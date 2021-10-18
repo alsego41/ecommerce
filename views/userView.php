@@ -9,7 +9,7 @@
             if (isset($_GET['categoryId'])){
             ?>
         <div class="products__currCategory">
-            <p><?php echo Category::checkName();?></p>
+            <p><?php echo Category::checkName($_GET['categoryId']);?></p>
         </div>
         <div class="productslist">
             <?php Product::renderByCategory('user');?>

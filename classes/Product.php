@@ -42,9 +42,35 @@
             include_once './views/publicationOptions.php';
         }
 
-        public static function create() {
-            include_once './views/productform.php';
-            // self::createRow();
+        public static function create($data) {
+            $strColumns = "(productName, productStock, productState, categoryId, productBrand, productModel, productUbication, productDescription, productPrice)";
+            $strValues = $data;
+            $id = self::createRow('products2', $strColumns, $strValues);
+            return $id;
+        }
+
+        public static function getFormData() {
+            Category::fillList();
+            $lista = Category::$listCat;
+            while ($category = $lista->fetch_assoc()) {
+                if ($category['categoryName'] == $_POST['categories']){
+                    $categoryId = $category['categoryId'];
+                }
+            }
+            $name = $_POST['prodName'];
+            $stock = (int)$_POST['prodStock'];
+            if ($_POST['prodState'] == 'true'){
+                $state = 1;
+            } else {
+                $state = 0;
+            }
+            $brand = $_POST['prodBrand'];
+            $model = $_POST['prodModel'];
+            $ubication = $_POST['prodUbication'];
+            $description = $_POST['prodDescription'];
+            $price = $_POST['prodPrice'];
+            $strValues = "('$name', '$stock', '$state', '$categoryId', '$brand', '$model', '$ubication', '$description', '$price')";
+            return $strValues;
         }
 
         public static function edit($id) {
