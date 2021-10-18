@@ -54,15 +54,18 @@
             return $data;
         }
 
-        public static function updateRow($tableName, $columns, $values) {
+        public static function updateRow($tableName, $columns, $values, $columnId, $id) {
             $conn = self::connect();
             $updateString = "";
             for ($i=0; $i < count($columns); $i++) { 
-                $updateString .= "$columns[$i]=$values[$i]";
+                $updateString .= "$columns[$i]=$values[$i],";
             }
-            $query = "UPDATE $tableName SET $updateString";
+            $updateString = substr($updateString, 0, -1);
+            $query = "UPDATE $tableName SET $updateString WHERE $columnId=$id";
             $data = $conn->query($query);
             self::closeConnection($conn);
+            // echo $updateString;
+            // echo $query;
             return $data;
         }
     }

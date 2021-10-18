@@ -69,14 +69,20 @@
             $ubication = $_POST['prodUbication'];
             $description = $_POST['prodDescription'];
             $price = $_POST['prodPrice'];
-            $strValues = "('$name', '$stock', '$state', '$categoryId', '$brand', '$model', '$ubication', '$description', '$price')";
-            return $strValues;
+            $arValues = ["'".$name."'", "'".$stock."'", "'".$state."'", "'".$categoryId."'", "'".$brand."'", "'".$model."'", "'".$ubication."'", "'".$description."'", "'".$price."'"];
+            // $strValues = "('$name', '$stock', '$state', '$categoryId', '$brand', '$model', '$ubication', '$description', '$price')";
+            return $arValues;
         }
 
         public static function edit($id) {
             self::$currProd = self::fetchRowByValue('products2','productId',$id)->fetch_assoc();
-            include_once './views/productform.php';
+            // include_once './views/productform.php';
             // self::updateRow();
+        }
+
+        public static function update($id, $data){
+            $arColumns = array('productName', 'productStock', 'productState', 'categoryId', 'productBrand', 'productModel', 'productUbication', 'productDescription', 'productPrice');
+            self::updateRow('products2', $arColumns, $data, 'productId', $id);
         }
 
         public static function delete($id) {

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php 
     spl_autoload_register(function ($class_name) {
         if (file_exists("./classes/$class_name.php")){
@@ -24,13 +25,24 @@
             }
             if (isset($_GET['editpid'])){
                 Product::edit($_GET['editpid']);
+                Product::renderForm();
+                if (isset($_POST['btnAddProduct'])){
+                    $editid = ($_GET['editpid']);
+                    $data = Product::getFormData();
+                    Product::update($editid, $data);
+                    // echo $data;
+                    // echo "(".join(',', $data).")";
+                    // $lastId = Product::create($data);
+                    // ob_clean();
+                    header("Location: ./product.php?pid=$editid");
+                }
                 // Product::showOptions();
             }
             if (isset($_GET['create'])){
                 Product::renderForm();
                 if (isset($_POST['btnAddProduct'])){
                     $data = Product::getFormData();
-                    $lastId = Product::create($data);
+                    $lastId = Product::create("(".join(',', $data).")");
                     
                     header("Location: ./product.php?pid=$lastId");
                 }
