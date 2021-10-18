@@ -39,7 +39,6 @@
         public static function createRow($tableName, $columns, $values) {
             $conn = self::connect();
             $query = "INSERT INTO $tableName $columns VALUES $values";
-            // echo $query;
             $conn->query($query);
             $lastId = $conn->insert_id;
             self::closeConnection($conn);
@@ -64,8 +63,6 @@
             $query = "UPDATE $tableName SET $updateString WHERE $columnId=$id";
             $data = $conn->query($query);
             self::closeConnection($conn);
-            // echo $updateString;
-            // echo $query;
             return $data;
         }
     }

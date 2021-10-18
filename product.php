@@ -30,13 +30,8 @@
                     $editid = ($_GET['editpid']);
                     $data = Product::getFormData();
                     Product::update($editid, $data);
-                    // echo $data;
-                    // echo "(".join(',', $data).")";
-                    // $lastId = Product::create($data);
-                    // ob_clean();
                     header("Location: ./product.php?pid=$editid");
                 }
-                // Product::showOptions();
             }
             if (isset($_GET['create'])){
                 Product::renderForm();

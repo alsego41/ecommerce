@@ -9,13 +9,9 @@
 
     $title = 'Login - Admin - Ecommerce';
     $styles[] = './views/styles/main.css';
-    // $styles[] = './views/styles/user.css';
     $styles[] = './views/styles/header.css';
     $styles[] = './views/styles/login.css';
-    // $styles[] = './views/styles/categories.css';
     include './views/head.php';
-    // include './views/header.php';
-    // include './views/userView.php';
     include './views/login.php';
 
     if (isset($_POST['subLogin'])) {
@@ -24,5 +20,4 @@
             header('Location: ./');
         }
     }
-    // include './controllers/addcart.php';
 ?>

@@ -49,7 +49,6 @@ ul {
 	flex-direction: row;
 	margin: 15px auto;
 	gap: 15px;
-	/* border-radius: 30px; */
 }
 
 .leftpanel__container {
@@ -57,7 +56,6 @@ ul {
 	display: flex;
 	flex-direction: column;
 	border-radius: 20px;
-	/* background-color: var(--yellow); */
 }
 
 .productslist {
@@ -80,6 +78,5 @@ ul {
 }
 
 .products__currCategory p {
-	/* color: white; */
 	font-size: 20px;
 }

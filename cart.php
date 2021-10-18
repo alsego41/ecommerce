@@ -13,7 +13,7 @@
     $styles[] = './views/styles/header.css';
     include './views/head.php';
     if (Session::check()){
-        include './views/hiadmin.php';
+        include './views/adminheader.php';
     }
     include './views/header.php';
     include './controllers/addcart.php';
