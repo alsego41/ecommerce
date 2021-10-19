@@ -16,8 +16,6 @@
         include './views/head.php';
         include './views/header.php';
         include './views/userView.php';
-        ?>
-<script src="./views/js/cartActions.js"></script>
-<?php
     }
 ?>
+<script src="./views/js/cartActions.js"></script>

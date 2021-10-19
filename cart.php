@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php 
-    require_once "./controllers/Cart.php";
+    require_once "./controllers/cart.php";
 ?>
