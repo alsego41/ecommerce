@@ -80,3 +80,7 @@ ul {
 .products__currCategory p {
 	font-size: 20px;
 }
+
+.header img:hover {
+	cursor: pointer;
+}

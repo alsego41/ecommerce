@@ -1,12 +1,5 @@
 <?php 
-    spl_autoload_register(function ($class_name) {
-        if (file_exists("./classes/$class_name.php")){
-            require_once "./classes/$class_name.php";
-        } else if (file_exists("./controllers/$class_name.php")){
-            require_once "./controllers/$class_name.php";
-        }
-    });
-
+    require_once "./controllers/autoload.php";
     $title = 'Login - Admin - Ecommerce';
     $styles[] = './views/styles/main.css';
     $styles[] = './views/styles/header.css';

@@ -1,7 +1,7 @@
 <?php
     class Session {
         public static function check() {
-            session_start();
+            // session_start();
             if (isset($_SESSION['logged'])){
 
                 if ($_SESSION['logged'] == 'true') {

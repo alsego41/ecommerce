@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <?php 
-    spl_autoload_register(function ($class_name) {
-        if (file_exists("./classes/$class_name.php")){
-            require_once "./classes/$class_name.php";
-        } else if (file_exists("./controllers/$class_name.php")){
-            require_once "./controllers/$class_name.php";
-        }
-    });
-
+    session_start();
+    require_once "./controllers/autoload.php";
     $title = 'Inicio - Ecommerce';
     $styles[] = './views/styles/main.css';
     $styles[] = './views/styles/header.css';
     $styles[] = './views/styles/publication.css';
-    
     if (Session::check()){
         $styles[] = './views/styles/admin.css';
         include './views/head.php';
@@ -53,7 +46,9 @@
         $styles[] = './views/styles/user.css';
         include './views/head.php';
         include './views/header.php';
-        include './controllers/addcart.php';
+        ?>
+<script src="./views/js/cartActions.js"></script>
+<?php
         if (!isset($_GET['pid'])){
             header('Location: ./');
         } else {
