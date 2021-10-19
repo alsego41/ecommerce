@@ -86,3 +86,33 @@ ul {
 .header img:hover {
 	cursor: pointer;
 }
+
+button {
+	text-decoration: none;
+	background-color: var(--aqua);
+	outline: none;
+	border: none;
+	color: white;
+	font-family: inherit;
+	font-size: inherit;
+	border-radius: 20px;
+	padding: 10px 30px;
+	transition: box-shadow 0.5s;
+}
+
+button:hover {
+	box-shadow: var(--shadow1);
+	cursor: pointer;
+}
+
+.cart__container--empty {
+	background-color: var(--lightgray);
+	width: 40%;
+	margin: 20px auto;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	border-radius: 20px;
+}
