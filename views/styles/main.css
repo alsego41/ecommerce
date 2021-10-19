@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css');
 
 * {
 	box-sizing: border-box;
@@ -6,6 +7,7 @@
 
 :root {
 	--red: rgb(226, 112, 112);
+	--lskyblue: rgb(137, 234, 253);
 	--skyblue: rgb(96, 228, 255);
 	--yellow: rgb(246, 206, 76);
 	--pink: rgb(241, 152, 255);

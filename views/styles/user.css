@@ -17,14 +17,13 @@
 	flex-direction: column;
 	justify-content: space-between;
 	box-shadow: var(--shadow1);
-	transition: 0.5s;
+	transition: transform 0.5s;
 	padding: 10px;
 }
 
 .products__box:hover {
 	cursor: pointer;
 	transform: scale(1.03);
-	transition: 0.5s;
 }
 
 .products__box--inactive {
@@ -74,16 +73,6 @@
 .products__cart--inactive:hover {
 	cursor: not-allowed;
 	background-color: var(--red);
-}
-
-.carrito {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-	background-color: var(--yellow);
-	padding: 10px;
-	color: black;
-	border-radius: 5px;
 }
 
 .product__cart--container {

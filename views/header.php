@@ -1,18 +1,24 @@
 <header class='header'>
-    <img src='../assets/logo.png' alt='Ecommerce logo' class='header__logo' onclick="document.location.href = './'">
+    <img src='./views/assets/logo.png' alt='Ecommerce logo' class='header__logo'
+        onclick="document.location.href = './'">
     <div class="carrito" onclick="document.location.href = './cart.php'">
-        <img src="../assets/cart.png" alt="Carrito">
+        <i class="bi bi-cart3"></i>
         <p class="carrito__count" id="carritoCount"></p>
     </div>
     <?php 
         if (Session::check()){
             ?>
-    <img src='../assets/profile.png' alt='Logout' class="header__account--img" onclick="document.location.href = './'">
+    <div class="carrito" onclick="document.location.href = './'">
+        <p>Salir</p>
+        <i class="bi bi-person-circle"></i>
+    </div>
     <?php
         } else {
             ?>
-    <img src='../assets/profile.png' alt='Login' class="header__account--img"
-        onclick="document.location.href = './login.php'">
+    <div class="carrito" onclick="document.location.href = './login.php'">
+        <p>Admin</p>
+        <i class="bi bi-person-circle"></i>
+    </div>
     <?php
         }
     ?>
