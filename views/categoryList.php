@@ -1,9 +1,9 @@
 <?php
     if (isset($_GET['categoryId'])){
         ?>
-<li class='categories__box'>
-    <a href='.' class='categories__text categories__text--main'>Todos los productos</a>
-</li>
+<a href='.' class='categories__text categories__text--main'>
+    <li class='categories__box'>Todos los productos</li>
+</a>
 <?php
     }
     while ($category = Category::$listCat->fetch_assoc()){

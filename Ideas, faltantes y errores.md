@@ -1,8 +1,10 @@
 Main
 
+- Hacer responsive
 - Agregar iconos
 - Agregar barra de busqueda en el listado de productos - ajax?
 - Admin View y User View comparten la lista de categorías
+- Manejo de errores en la base de datos
 
 Admin
 
@@ -13,4 +15,6 @@ Admin
 User
 
 - Cuando se entra al carrito ajustar la cantidad al stock disponible
-- - Y avisarle al usuario que se le ha reducido la cantidad solicitada debido a que no hay esa cantidad disponible
+  - Y avisarle al usuario que se le ha reducido la cantidad solicitada debido a que no hay esa cantidad disponible
+- Completar carrito
+- Cuando una categoría solo tiene productos desactivados no muestra ningún mensaje al usuario
