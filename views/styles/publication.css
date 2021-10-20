@@ -142,6 +142,10 @@ pre.publication__text--secondary {
 	padding: 14px 35px;
 	border-radius: 30px;
 	box-shadow: var(--shadow1);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: white;
 }
 
 .publication__button--inactive {

@@ -53,6 +53,7 @@
             }?>
                     <!-- <div class="publication__button publication__cart--section publication__cart--last"> -->
                     <p class="publication__button--text">Agregar al carrito</p>
+                    <i class="bi bi-cart3"></i>
                     <!-- <img src="" alt=""> -->
                 </div>
             </div>
