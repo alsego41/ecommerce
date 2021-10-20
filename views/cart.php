@@ -40,9 +40,9 @@
     foreach (Product::$listProd as $product) {
         ?>
             <div class="cart__price--subtotal">
-                <p class="cart__price--prodQty"><?php echo Product::$qtySelectedOnes[$i]; $i++; ?>x</p>
+                <p class="cart__price--prodQty"><?php echo Product::$qtySelectedOnes[$i]; ?>x</p>
                 <p class="cart__price--prodName"><?php echo $product['productName']; ?></p>
-                <p class="cart__price--prodPrice"><?php echo $product['productPrice']; ?></p>
+                <p class="cart__price--prodPrice"><?php echo Product::$qtySelectedOnes[$i]*$product['productPrice']; $i++; ?></p>
             </div>
             <?php
     }
