@@ -10,7 +10,10 @@
     if (isset($_POST['subLogin'])) {
         if (Admin::tryLogin($_POST['user'], $_POST['psw'])){
             unset($_POST['subLogin']);
-            header('Location: ./');
+            displayAlert(1);
+            header('refresh: 3, url=./');
+        } else {
+            displayAlert(0);
         }
     }
 ?>
