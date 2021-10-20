@@ -4,7 +4,7 @@
             <a href='product.php?create'>
                 <div class='addx__item'>
                     <p class='addx__text'>Agregar productos</p>
-                    <img src='../assets/addition.png' alt='Add'>
+                    <i class="bi bi-plus-circle"></i>
                 </div>
             </a>
         </div>
