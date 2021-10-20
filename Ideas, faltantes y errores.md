@@ -17,4 +17,4 @@ User
   - Y avisarle al usuario que se le ha reducido la cantidad solicitada debido a que no hay esa cantidad disponible
 - Completar carrito
 - Cuando una categoría solo tiene productos desactivados no muestra ningún mensaje al usuario
-- Carrito vacío no tiene estilo
+- Carrito aplicar estilos

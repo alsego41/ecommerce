@@ -29,9 +29,11 @@
     <p class='products__maintext'><?php echo $product['productName']?></p>
     <div class='products__actions'>
         <p class='products__actions--text products__actions--text<?php echo $textClass?> '><?php echo $state?></p>
-        <p class='products__actions--text products__actions--clickable'>
-            <a href='product.php?pid=<?php echo $product['productId']?>'>EDITAR</a>
-        </p>
+
+        <a href='product.php?pid=<?php echo $product['productId']?>'>
+            <p class='products__actions--text products__actions--clickable'>EDITAR</p>
+        </a>
+
     </div>
     <div class='products__stock'>
         <p class='products__stock--text'><?php echo $product['productStock']?></p>
