@@ -32,5 +32,11 @@
             $_SESSION['user_name'] = $user;
             session_regenerate_id();
         }
+
+        public static function logOut() {
+            session_start();
+            $_SESSION['logged'] = 'false';
+            session_destroy();
+        }
     }
 ?>

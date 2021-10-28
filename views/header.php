@@ -8,7 +8,7 @@
     <?php 
         if (Session::check()){
             ?>
-    <div class="carrito" onclick="document.location.href = './'">
+    <div class="carrito" onclick="document.location.href = './logout.php'">
         <p>Salir</p>
         <i class="bi bi-person-circle"></i>
     </div>
