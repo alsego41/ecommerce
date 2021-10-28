@@ -23,7 +23,9 @@
         public static function fetchAll($tableName) {
             $conn = self::connect();
             $query = "SELECT * FROM $tableName";
+            // echo $query;
             $data = $conn->query($query);
+            // echo var_dump($data);
             self::closeConnection($conn);
             return $data;
         }

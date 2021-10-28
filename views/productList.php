@@ -8,7 +8,7 @@
         <p class='products__actions--head'></p>
     </div>
     <div class='products__stock'>
-        <p class='products__stock--text'>Stock Disponible</p>
+        <p class='products__stock--text'>Stock</p>
     </div>
     <p class='products__price'>Precio unitario</p>
 </div>
