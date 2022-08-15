@@ -1,9 +1,9 @@
 <?php   
     class Database {
         public static $host = 'remotemysql.com';
-        public static $user = 'B1McginKUR';
-        public static $psw = '7C7u7waOgt';
-        public static $dbname = 'B1McginKUR';
+        public static $user = 'ABh4HSq0IP';
+        public static $psw = 'TxFCdhQrdg';
+        public static $dbname = 'ABh4HSq0IP';
         public static $port = 3306;
 
         // public static $host = 'localhost';
